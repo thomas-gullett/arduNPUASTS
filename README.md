@@ -1,4 +1,3 @@
-# ArduPilot Project
 to build ardupilot assuming a fresh install of ubuntu on pi5 
 ```
 sudo apt-get update
