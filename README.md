@@ -14,11 +14,11 @@ to run the sim
 change directory into the arduplane directory to run plane type sim
 * -f is Model type
 * -L is location by name in /tools/autotest/locations.txt
-  *KRDR
-  *CSFS
-  *TOC
-  *TOD
-  *RETURNTOD
+  - KRDR
+  - CSFS
+  - TOC
+  - TOD
+  - RETURNTOD
 * --Mavproxy-args is a way to pass arguments to the mav proxy instance that opens with the sim. this example pushes out 2 udp streams for GCSs. connect MP instance as UDP Client
 ```
 cd /home/USER/ArduNP/ArduPlane/
