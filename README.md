@@ -1,4 +1,26 @@
 # ArduPilot Project
+to build ardupilot assuming a fresh install of ubuntu on pi5 
+```
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install git
+sudo apt-get install gitk git-gui
+git clone --recurse-submodules https://github.com/shavedwookie/ArduNP
+cd ArduNP
+Tools/environment_install/install-prereqs-ubuntu.sh -y
+. ~/.profile
+```
+
+to run the sim
+change directory into the arduplane directory to run plane type sim
+* -f is Model type
+* -L is location by name in /tools/autotest/locations.txt 
+* --Mavproxy-args is a way to pass arguments to the mav proxy instance that opens with the sim. this example pushes out 2 udp streams for GCSs. connect MP instance as UDP Client
+```
+cd /home/USER/ArduNP/ArduPlane/
+sim_vehicle.py -f quadplane -L KRDR --mavproxy-args="--out=udp:GCSIP:14550 --out=udp:GCSIP2:14551"
+
+```
 
 <a href="https://ardupilot.org/discord"><img src="https://img.shields.io/discord/674039678562861068.svg" alt="Discord">
 
